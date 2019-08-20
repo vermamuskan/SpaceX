@@ -1,0 +1,6 @@
+sceneSetups:
+- path: C:/Users/Lenovo/Desktop/game/g/M2 - Project Files/25-26 - Platformer - finished
+    game/M2 - Platformer/Assets/Scenes/Game Over.unity
+  isLoaded: 1
+  isActive: 1
+  isSubScene: 0
