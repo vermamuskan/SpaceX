@@ -63,6 +63,7 @@
      <Compile Include="Assets\play.cs" />
      <Compile Include="Assets\play1.cs" />
      <Compile Include="Assets\StarSparrow\Readme\Readme Files\Scripts\Readme.cs" />
+     <Compile Include="Assets\Thruster.cs" />
      <None Include="Assets\AurynSky\Rockets Missiles and Bombs\READ ME.txt" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/Lenovo/Desktop/can do/ds assign/SpaceX/space_x/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

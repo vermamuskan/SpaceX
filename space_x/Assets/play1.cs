@@ -6,7 +6,7 @@ public class play1 : MonoBehaviour
 {
    [SerializeField]float movementSpeed = 50f;
    [SerializeField]float turnSpeed = 60f;
-
+   [SerializeField]Thruster thruster;
     Transform myT;
 
     void Awake()
