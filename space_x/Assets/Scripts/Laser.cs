@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 [RequireComponent(typeof(LineRenderer))]
 public class Laser : MonoBehaviour
-{  [SerializeField]float laserOffTime=1.5f;
+{  [SerializeField]float laserOffTime=0.5f;
 [SerializeField]float maxDistance=300f;
     LineRenderer lr;
  bool canFire;

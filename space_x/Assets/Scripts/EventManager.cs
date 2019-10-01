@@ -9,8 +9,10 @@ public class EventManager : MonoBehaviour
 
 
 
-      public static void Start Game(){
+      public static void StartGame(){
+           Debug.Log("Start the game");
            if(onStartGame!=null)
                onStartGame();
       }
 }
+ 
