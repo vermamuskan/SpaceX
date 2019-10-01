@@ -55,15 +55,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Asteroid.cs" />
-     <Compile Include="Assets\AsteroidManager.cs" />
-     <Compile Include="Assets\Followcam.cs" />
-     <Compile Include="Assets\Laser.cs" />
      <Compile Include="Assets\NewBehaviourScript.cs" />
      <Compile Include="Assets\play.cs" />
-     <Compile Include="Assets\play1.cs" />
+     <Compile Include="Assets\Scripts\Asteroid.cs" />
+     <Compile Include="Assets\Scripts\AsteroidManager.cs" />
+     <Compile Include="Assets\Scripts\EventManager.cs" />
+     <Compile Include="Assets\Scripts\Followcam.cs" />
+     <Compile Include="Assets\Scripts\GameUI.cs" />
+     <Compile Include="Assets\Scripts\Laser.cs" />
+     <Compile Include="Assets\Scripts\play1.cs" />
+     <Compile Include="Assets\Scripts\Thruster.cs" />
      <Compile Include="Assets\StarSparrow\Readme\Readme Files\Scripts\Readme.cs" />
-     <Compile Include="Assets\Thruster.cs" />
      <None Include="Assets\AurynSky\Rockets Missiles and Bombs\READ ME.txt" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/Lenovo/Desktop/can do/ds assign/SpaceX/space_x/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
