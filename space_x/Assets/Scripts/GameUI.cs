@@ -4,31 +4,35 @@ using UnityEngine.UI;
 using UnityEngine;
 
 public class GameUI : MonoBehaviour
-{   bool isDisplayed=false; 
-    [SerializeField]GameObject playButton;
-    void OnEnable(){
-         EventManager.onStartGame+=HidePanel;
-       
-}
-      void OnDisable(){
-          EventManager.onStartGame -=HidePanel;
-      }
-     void HidePanel(){
+{ 
+//  bool isDisplayed=false; 
+    [SerializeField]GameObject mainMenu;
+	[SerializeField]GameObject gameUI;
 
-            isDisplayed=!isDisplayed;
+	bool isDisplayed = true;
+	[SerializeField]GameObject playButton;
 
-            playButton.SetActive(isDisplayed);
+    void OnEnable()
+	{
+         EventManager.onStartGame+= ShowGameUI;
+		 EventManager.onPlayerDeath += ShowMainMenu;
+    }       
 
-           if(isDisplayed){
-                playButton.SetActive(false);
-           }
-         else{
-             playButton.SetActive(true);
-         }
+      void OnDisable()
+	 {
+          EventManager.onStartGame -= ShowGameUI;
+		  EventManager.onPlayerDeath -= ShowMainMenu;
      }
-           public void PlayGame(){
-               EventManager.StartGame();
- 
 
-           }
-}
+	  void ShowMainMenu()
+	  {
+	       mainMenu.SetActive(true);
+			gameUI.SetActive(false);
+	  }
+
+	  void ShowGameUI()
+	  {
+	        mainMenu.SetActive(false);
+			gameUI.SetActive(true);
+	  }
+} 
