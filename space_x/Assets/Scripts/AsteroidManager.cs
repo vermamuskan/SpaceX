@@ -10,13 +10,17 @@ public class AsteroidManager : MonoBehaviour
     void Start(){
    PlaceAsteroids(); 
     }
-    /* void OnEnable(){
+     void OnEnable(){
          EventManager.onStartGame+=PlaceAsteroids;
+		 Eventmanager.onPlayerDeath += DestroyAsteroids;
+		 EventManager.onReSpawnPickup += PlacePickup;
        
 }
       void OnDisable(){
           EventManager.onStartGame -=PlaceAsteroids;
-      }*/
+		  Eventmanager.onPlayerDeath -= DestroyAsteroids;
+		 EventManager.onReSpawnPickup -= PlacePickup;
+ 
     void PlaceAsteroids()
     {
         for(int x=0;x<numberOfAsteroidsOnAnAxis;x++){

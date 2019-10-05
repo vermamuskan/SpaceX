@@ -61,9 +61,12 @@
      <Compile Include="Assets\Scripts\Followcam.cs" />
      <Compile Include="Assets\Scripts\GameUI.cs" />
      <Compile Include="Assets\Scripts\Laser.cs" />
+     <Compile Include="Assets\Scripts\Pickup.cs" />
      <Compile Include="Assets\Scripts\play1.cs" />
+     <Compile Include="Assets\Scripts\PlayerInput.cs" />
      <Compile Include="Assets\Scripts\PlayGameButton.cs" />
      <Compile Include="Assets\Scripts\Shield.cs" />
+     <Compile Include="Assets\Scripts\ShieldUI.cs" />
      <Compile Include="Assets\Scripts\Thruster.cs" />
      <Compile Include="Assets\Scripts\Timer.cs" />
      <Compile Include="Assets\StarSparrow\Readme\Readme Files\Scripts\Readme.cs" />
