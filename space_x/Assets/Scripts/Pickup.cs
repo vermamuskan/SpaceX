@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[DisallowMultipleComponent]
+[RequireComponent(typeof(CapsuleCollider))]
 public class Pickup : MonoBehaviour
 {
 static int points=100;
 bool gotHit = false;
-[SerializeField] float rotationOffset=100f;
+[SerializeField]float rotationOffset=100f;
  Transform myT;
  
  Vector3 randomRotation;
@@ -28,21 +29,19 @@ bool gotHit = false;
    void OnTriggerEnter(Collider col)
    {
     if(col.transform.CompareTag("Player"))
-	{
 	if(!gotHit)
-	{
-		gotHit=true;
-	}
-	PickupHit();
-	}
-   	  
+		//gotHit=true;
+		PickupHit();
    }
    public void PickupHit()
    {
+       if(!gotHit)
+	   {
+	      gotHit = true;
    	      Debug.Log("hit");
 		  EventManager.ReSpawnPickup();
 		  Destroy(gameObject);
+	   }
    }
 
 }
-b

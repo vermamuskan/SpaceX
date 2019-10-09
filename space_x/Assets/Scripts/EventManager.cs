@@ -30,5 +30,11 @@ public class EventManager : MonoBehaviour
 		  if(onTakeDamage!=null)
 		     onTakeDamage(percent);
 	  }
+
+	  public static void PlayerDeath()
+	  {
+	  	  if(onPlayerDeath != null)
+		  onPlayerDeath();
+	  }
 }
  

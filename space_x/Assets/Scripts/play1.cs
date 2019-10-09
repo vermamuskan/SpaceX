@@ -29,6 +29,6 @@ public class play1 : MonoBehaviour
     void Thrust()
     {
         if(Input.GetAxis("Vertical") > 0)
-        myT.translate= Vec* movementSpeed * Time.deltaTime * Input.GetAxis("Vertical");
+        myT.Translate (0f, Time.deltaTime *movementSpeed* Input.GetAxis("Vertical"),0f);
    }
 }

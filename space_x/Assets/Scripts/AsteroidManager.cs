@@ -4,46 +4,60 @@ using UnityEngine;
 
 public class AsteroidManager : MonoBehaviour
 { 
-    [SerializeField]Asteroid asteroid;
-    [SerializeField]int numberOfAsteroidsOnAnAxis=5;
-    [SerializeField]int gridSpacing=50;
-    void Start(){
+    [SerializeField]Asteroid asteroidPrefab;
+	[SerializeField]GameObject pickupPrefab;
+    [SerializeField]int numberOfAsteroidsOnAnAxis=10;
+    [SerializeField]int gridSpacing=100;
+	public List<Asteroid> asteroid = new List<Asteroid>();
+    void Start()
+	  {
    PlaceAsteroids(); 
-    }
-     void OnEnable(){
+      }
+     void OnEnable()
+	 {
          EventManager.onStartGame+=PlaceAsteroids;
-		 Eventmanager.onPlayerDeath += DestroyAsteroids;
+		 EventManager.onPlayerDeath += DestroyAsteroids;
 		 EventManager.onReSpawnPickup += PlacePickup;
        
-}
-      void OnDisable(){
+      }
+      void OnDisable()
+	  {
           EventManager.onStartGame -=PlaceAsteroids;
-		  Eventmanager.onPlayerDeath -= DestroyAsteroids;
+		  EventManager.onPlayerDeath -= DestroyAsteroids;
 		 EventManager.onReSpawnPickup -= PlacePickup;
- 
+ }
     void PlaceAsteroids()
     {
-        for(int x=0;x<numberOfAsteroidsOnAnAxis;x++){
-            for(int y=0;y<numberOfAsteroidsOnAnAxis;y++){
-                for(int z=0;z<numberOfAsteroidsOnAnAxis;z++){
-            InstantiateAsteroid(x,y,z);
-        }
-        }
-        }
+        for(int x=0;x<numberOfAsteroidsOnAnAxis;x++)
+            for(int y=0;y<numberOfAsteroidsOnAnAxis;y++)
+                for(int z=0;z<numberOfAsteroidsOnAnAxis;z++)
+             InstantiateAsteroid(x,y,z);
+             PlacePickup();
     }
-
+     void DestroyAsteroids()
+    {
+	foreach(Asteroid ast in asteroid)
+	 // ast.SelfDestruct();
+	  asteroid.Clear();
+}
  void InstantiateAsteroid(int x, int y, int z){
-     Instantiate(asteroid,
+ Asteroid temp=Instantiate(asteroidPrefab,
      new Vector3( transform.position.x+(x*gridSpacing) + AsteroidOffset(),
      transform.position.y+(y*gridSpacing)+AsteroidOffset(),
      transform.position.z+(z*gridSpacing) + AsteroidOffset()),
       Quaternion.identity,
-      transform);
- }  
+      transform) as Asteroid;
+	  temp.name="Asteroid: " + x + "-"+y+"-"+z;
+	  asteroid.Add(temp);
+	  }  
+	  void PlacePickup()
+	  {
+	  	  int rnd = Random.Range(0,asteroid.Count);
+		  Instantiate(pickupPrefab,asteroid[rnd].transform.position,Quaternion.identity);
+		  Debug.Log("Destroying: "+asteroid[rnd].name);
+		  asteroid.RemoveAt(rnd);
+	  }
  float AsteroidOffset(){
      return Random.Range(-gridSpacing/2f,gridSpacing/2f);
  }
-
-
-   
 }

@@ -9,8 +9,7 @@ public class GameUI : MonoBehaviour
     [SerializeField]GameObject mainMenu;
 	[SerializeField]GameObject gameUI;
 
-	bool isDisplayed = true;
-	[SerializeField]GameObject playButton;
+	
 
     void OnEnable()
 	{

@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class PlayGameButton : MonoBehaviour
 {
-   public void Click()
-   {
+   public void onClick()
+   {   
+   print("bhavishyamoti");
    	   EventManager.StartGame();
    }
 }

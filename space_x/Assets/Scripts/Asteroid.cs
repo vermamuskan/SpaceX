@@ -8,10 +8,9 @@ public class Asteroid : MonoBehaviour
     [SerializeField]float minScale=.10f;
     [SerializeField]float maxScale=1.8f;
     [SerializeField]float rotationOffset=100f;
-    
+    [SerializeField]GameObject explosion;
     Transform myT;
     Vector3 randomRotation;
-
     void Awake()
     {
         myT=transform;
@@ -27,11 +26,12 @@ public class Asteroid : MonoBehaviour
          randomRotation.x = Random.Range(-rotationOffset, rotationOffset);
          randomRotation.y = Random.Range(-rotationOffset, rotationOffset);
          randomRotation.z = Random.Range(-rotationOffset, rotationOffset);
-         Debug.Log(randomRotation);
+        // Debug.Log(randomRotation);
     } 
     void Update()
     {
          myT.Rotate(randomRotation * Time.deltaTime);
     }
+
 }
 
