@@ -6,7 +6,7 @@ public class PlayGameButton : MonoBehaviour
 {
    public void onClick()
    {   
-   print("bhavishyamoti");
+   //print("bhavishyamoti");
    	   EventManager.StartGame();
    }
 }

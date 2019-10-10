@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/main.unity
+- path: C:/Users/Aamiya Garg/SpaceX/space_x/Assets/scene5.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

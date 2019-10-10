@@ -613,8 +613,8 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
-    Build: 1
-    Collab: 1
+    Build: 0
+    Collab: 0
     UNet: 1
   luminIcon:
     m_Name: 
@@ -635,10 +635,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: df0d2c42-376f-4fc8-a4a1-fc6d84866a00
+  cloudProjectId: fe02f82a-16fb-4338-a241-c2025164d8f1
   framebufferDepthMemorylessMode: 0
-  projectName: space_x
-  organizationId: mverma
+  projectName: space_x (1)
+  organizationId: aamiyagarg
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
