@@ -1,0 +1,28 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+public class CheckAns7 : MonoBehaviour
+{
+    public InputField iField;
+    public string ans;
+    //public string myText;
+
+    public void LoadSceneSelect()
+    {
+        Debug.Log(iField.text);
+        ans = iField.text;
+
+        if (ans.Equals("d") || ans.Equals("D"))
+        {
+            Debug.Log("Correct!");
+            SceneManager.LoadScene(1);
+
+        }
+        else
+        {
+            Debug.Log("Incorrect!");
+        }
+    }
+}
